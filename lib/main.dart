@@ -19,20 +19,27 @@ class AppAkademie extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  double _sliderValue = 0;
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(widget.title),
       ),
       body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
               'Hello World!',
@@ -59,6 +66,19 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            const SizedBox(height: 20),
+            Slider(
+              value: _sliderValue,
+              min: 0,
+              max: 100,
+              divisions: 100,
+              label: _sliderValue.round().toString(),
+              onChanged: (double value) {
+                setState(() {
+                  _sliderValue = value;
+                });
+              },
             ),
           ],
         ),
