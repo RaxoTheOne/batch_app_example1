@@ -34,6 +34,10 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const SizedBox(height: 20),
+            const Text(
+              'Hello World!',
+            ),
             Container(
               width: 100,
               height: 100,
