@@ -32,30 +32,34 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const SizedBox(height: 20),
             const Text(
               'Hello World!',
             ),
-            Container(
-              width: 100,
-              height: 100,
-              decoration: const BoxDecoration(
-                color: Colors.red,
-                shape: BoxShape.rectangle,
-              ),
-            ),
             const SizedBox(height: 20),
-            Container(
-              width: 100,
-              height: 100,
-              decoration: const BoxDecoration(
-                color: Colors.green,
-                shape: BoxShape.rectangle,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: 100,
+                  height: 100,
+                  decoration: const BoxDecoration(
+                    color: Colors.red,
+                    shape: BoxShape.rectangle,
+                  ),
+                ),
+                const SizedBox(width: 20),
+                Container(
+                  width: 100,
+                  height: 100,
+                  decoration: const BoxDecoration(
+                    color: Colors.green,
+                    shape: BoxShape.rectangle,
+                  ),
+                ),
+              ],
             ),
-
           ],
         ),
       ),
