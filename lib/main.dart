@@ -56,10 +56,6 @@ class MyHomePage extends StatelessWidget {
                 shape: BoxShape.rectangle,
               ),
             ),
-            const SizedBox(height: 20),
-            const Text(
-              'Hello World!',
-            ),
           ],
         ),
       ),
