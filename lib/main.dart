@@ -32,7 +32,6 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             const SizedBox(height: 20),
@@ -56,6 +55,7 @@ class MyHomePage extends StatelessWidget {
                 shape: BoxShape.rectangle,
               ),
             ),
+
           ],
         ),
       ),
