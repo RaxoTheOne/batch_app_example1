@@ -29,7 +29,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  double _sliderValue = 0;
+  bool _switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -68,15 +68,11 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             const SizedBox(height: 20),
-            Slider(
-              value: _sliderValue,
-              min: 0,
-              max: 100,
-              divisions: 100,
-              label: _sliderValue.round().toString(),
-              onChanged: (double value) {
+            Switch(
+              value: _switchValue,
+              onChanged: (bool value) {
                 setState(() {
-                  _sliderValue = value;
+                  _switchValue = value;
                 });
               },
             ),
